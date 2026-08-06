@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo</title>
+    <link rel="stylesheet" href="01_estilo_pricipal.css">
+</head>
+<body>
+    <nav>
+    <img> <!--colocar a logo do projeto aqui-->
+
+   </nav>
+    
+<main>
+   <h1>MinervArt</h1>
+   <h3>O mundo das artes, perto de você</h3>
+   <aside>
+
+   <div class="menu-abas" onclick="toggleMenu()">
+    <h3>☰ Categorias</h3>
+</div>
+
+<div id="secoes" class="conteudo-aba">
+    <ul class="menu">
+        <li><a class="nav" href="2_Pintura.html">Pintura</a></li>
+        <li><a class="nav" href="3_musica.html">Música</a></li>
+        <li><a class="nav" href="4_cinema.html">Cinema</a></li>
+        <li><a class="nav" href="5_literatura.html">Dança</a></li>
+        <li><a class="nav" href="6_Escultura.html">Escultura</a></li>
+        <li><a class="nav" href="7_moda.html">Literatura</a></li>
+        <li><a class="nav" href="8_teatro.html">Arquitetura</a></li>
+        <li><a class="nav" href="9_arquitetura.html">Moda</a></li>
+        <li><a class="nav" href="10_dança.html">Dança</a></li>
+    </ul>
+</div>
+</aside>
+   <br>
+   <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam molestie sodales mi, sollicitudin venenatis metus sagittis a. Donec sodales mollis lobortis. Nunc vel dolor eget lacus sodales faucibus in in elit. Pellentesque mollis orci at ex pharetra, pretium semper ligula posuere. Quisque tellus nisi, blandit tempus egestas id, hendrerit vitae quam. Integer sed rutrum lorem, nec ornare nisl. Cras ligula nibh, egestas sit amet nulla sed, placerat dapibus ipsum. Proin at tempus nisl, aliquet tincidunt ligula. Etiam id tristique velit. Sed rutrum elit vel elit blandit, nec tristique tellus pretium. Curabitur ac ultricies tortor. Nulla sapien urna, faucibus a metus nec, dictum elementum turpis.</h4>
+
+
+   <script>
+function toggleMenu() {
+    const menu = document.getElementById("secoes");
+    const titulo = document.getElementById("tituloMenu");
+
+    menu.classList.toggle("ativo");
+
+    if(menu.classList.contains("ativo")){
+        titulo.innerHTML = "✖ Fechar";
+    }else{
+        titulo.innerHTML = "☰ Categorias";
+    }
+}
+</script>
+
+</main>
+
+</body>
+</html>
