@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apollo - cinema</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .cinema {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+        }
+
+        .estrela {
+            font-size: 30px;
+            color: gray;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Apollo</h1>
+
+    <h2>cinema</h2>
+
+
+    <!-- PRIMEIRA FILME -->
+
+    <div class="cinema">
+
+        <h2>Imagine</h2>
+
+        <p>John Lennon</p>
+
+        <h3>Avalie este Filme</h3>
+
+        <span class="estrela" onclick="avaliar(this, 1)">★</span>
+        <span class="estrela" onclick="avaliar(this, 2)">★</span>
+        <span class="estrela" onclick="avaliar(this, 3)">★</span>
+        <span class="estrela" onclick="avaliar(this, 4)">★</span>
+        <span class="estrela" onclick="avaliar(this, 5)">★</span>
+
+        <p>Nota: nenhuma</p>
+
+    </div>
+
+
+    <!-- SEGUNDO FILME -->
+
+    <div class="cinema">
+
+        <h2>Bohemian Rhapsody</h2>
+
+        <p>Queen</p>
+
+        <h3>Avalie este Filme</h3>
+
+        <span class="estrela" onclick="avaliar(this, 1)">★</span>
+        <span class="estrela" onclick="avaliar(this, 2)">★</span>
+        <span class="estrela" onclick="avaliar(this, 3)">★</span>
+        <span class="estrela" onclick="avaliar(this, 4)">★</span>
+        <span class="estrela" onclick="avaliar(this, 5)">★</span>
+
+        <p>Nota: nenhuma</p>
+
+    </div>
+
+
+    <!-- TERCEIRO FILME -->
+
+    <div class="cinema">
+
+        <h2>Billie Jean</h2>
+
+        <p>Michael Jackson</p>
+
+        <h3>Avalie este Filme</h3>
+
+        <span class="estrela" onclick="avaliar(this, 1)">★</span>
+        <span class="estrela" onclick="avaliar(this, 2)">★</span>
+        <span class="estrela" onclick="avaliar(this, 3)">★</span>
+        <span class="estrela" onclick="avaliar(this, 4)">★</span>
+        <span class="estrela" onclick="avaliar(this, 5)">★</span>
+
+        <p>Nota: nenhuma</p>
+
+    </div>
+
+
+    <script>
+
+        function avaliar(estrelaClicada, nota) {
+
+            let cinema = estrelaClicada.parentElement;
+
+            let estrelas = cinema.querySelectorAll(".estrela");
+
+            let resultado = cinema.querySelector("p:last-child");
+
+
+            for (let i = 0; i < estrelas.length; i++) {
+
+                if (i < nota) {
+
+                    estrelas[i].style.color = "gold";
+
+                } else {
+
+                    estrelas[i].style.color = "gray";
+
+                }
+
+            }
+
+
+            resultado.innerHTML = "Nota: " + nota + " de 5 estrelas";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
